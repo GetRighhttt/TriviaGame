@@ -26,7 +26,7 @@ struct TriviaView: View {
                 
                 Button{
                     Task.init {
-                        await triviaManager.fetchTrivia
+                        await triviaManager.fetchTrivia()
                     }
                 } label: {
                     UniversalButton(text: "Try Again?")
