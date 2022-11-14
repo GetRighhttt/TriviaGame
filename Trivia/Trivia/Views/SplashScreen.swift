@@ -43,6 +43,8 @@ struct SplashScreen: View {
                             .font(.system(size: 40))
                             .foregroundColor(.white)
                             .cornerRadius(20)
+                            .shadow(color: Color("ButtonColor"), radius: 20)
+
                     }
                     .scaleEffect(size)
                     .opacity(opacity)
