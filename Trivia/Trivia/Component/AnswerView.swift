@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AnswerView: View {
     @EnvironmentObject var triviaManager: TriviaManager
-
+    
     
     // is the actual answer
     var answer: Answer
@@ -39,13 +39,16 @@ struct AnswerView: View {
         }// modify look based on selection and if wrong or not.
         .padding()
         .frame(maxWidth: .infinity, alignment: .leading)
-        .foregroundColor( isSelected ? Color("ButtonColor") : .gray)
+        .foregroundColor( triviaManager.answerSelected ? (isSelected ? Color("ButtonColor") : .gray) : Color("SecondaryAccentColor"))
         .background(.white)
         .cornerRadius(15)
         .shadow(color: isSelected ? (answer.isCorrect ? green : red)
                 : .gray, radius: 10, x: 0.5, y: 0.5)
         .onTapGesture {
-            isSelected = true
+            if !triviaManager.answerSelected {
+                isSelected = true
+                triviaManager.chooseAnswer(answer: answer)
+            }
         }
     }
 }

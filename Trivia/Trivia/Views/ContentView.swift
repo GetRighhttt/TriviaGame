@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var triviaManager = TriviaManager()
+
     var body: some View {
-        
-        @StateObject var triviaManager = TriviaManager()
-        
+                
         /*
          Need 2 vstacks to stack the views on top of eachother.
          */
@@ -20,7 +20,7 @@ struct ContentView: View {
                 VStack(spacing: 20) {
                     
                     //title
-                    Text("Trivia Game")
+                    Text("Cartoon Trivia!")
                         .universalTitle()
                     
                     // headline
@@ -32,6 +32,7 @@ struct ContentView: View {
                 // start button
                 NavigationLink {
                     TriviaView()
+                        .environmentObject(triviaManager)
                     
                 } label: {
                     UniversalButton(text: "Let's Begin!")

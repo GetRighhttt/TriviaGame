@@ -69,8 +69,14 @@ class TriviaManager: ObservableObject {
             
             /*
              Have to publish changes on the main thread.
+             method called when we want to start trivia game again and see results.
              */
             DispatchQueue.main.async {
+                self.index = 0
+                self.score = 0
+                self.progress = 0.00
+                self.reachedEnd = false
+                
                 self.trivia = decodedData.results
                 self.length = self.trivia.count
                 self.setQuestion()
@@ -107,6 +113,9 @@ class TriviaManager: ObservableObject {
         }
     }
     
+    /*
+     Choose answer method.
+     */
     func chooseAnswer(answer: Answer) {
         answerSelected = true
         if answer.isCorrect {

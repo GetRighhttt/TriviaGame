@@ -16,32 +16,36 @@ struct QuestionView: View {
             
             // title hstack
             HStack {
-                Text("Trivia Game")
+                Text("Cartoon Trivia!")
                     .universalTitle()
                 Spacer()
-                Text("1 out of 10")
+                Text("\(triviaManager.index + 1) out of \(triviaManager.length)")
                     .foregroundColor(Color("ButtonColor"))
                     .fontWeight(.heavy)
             }
             
             // progress bar view
-            ProgressBar(progress: 90)
+            ProgressBar(progress: triviaManager.progress)
             
             // display questions
             VStack(alignment: .leading, spacing: 20) {
                 
                 // Question
-                Text("Which &quot;Toy Story&quot; character was voiced by Don Rickles?")
+                Text(triviaManager.question)
                     .universalText()
                 
-                // AnswerViews for right and wrong answers.
-                AnswerView(answer: Answer(text: "Mr. Potato Head",
-                                         isCorrect: true))
-                AnswerView(answer: Answer(text: "Buzz Light Year",
-                                         isCorrect: false))
+                // iterate through trivimanger answers and observe answer
+                ForEach (triviaManager.answerChoices, id: \.id) { answer in
+                    AnswerView(answer: answer)
+                        .environmentObject(triviaManager)
+                }
             }
-            
-            UniversalButton(text: "Continue")
+            Button {
+                triviaManager.navigateToNextQuestion()
+            } label: {
+                UniversalButton(text: "Continue", background: triviaManager.answerSelected ? Color("SecondaryAccentColor") : .gray)
+            }
+            .disabled(!triviaManager.answerSelected)
             
         }
         .padding()
