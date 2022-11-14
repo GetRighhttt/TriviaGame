@@ -34,30 +34,33 @@ struct SplashScreen: View {
                 backgroundGradient.ignoresSafeArea()
                 VStack {
                     VStack {
+//                        Text("Trivia Time!")
+//                            .font(.system(size: 13))
+//                            .fontWeight(.heavy)
+//                            .foregroundColor(Color("ButtonColor").opacity(1.0))
+                        
                         Image("TandJ")
                             .font(.system(size: 40))
                             .foregroundColor(.white)
                             .cornerRadius(20)
-                        
-                        Text("")
-                            .font(.system(size: 20))
-                            .foregroundColor(Color("ButtonColor").opacity(1.0))
                     }
                     .scaleEffect(size)
                     .opacity(opacity)
                     .onAppear {
-                        withAnimation(.easeIn(duration: 0.8)) {
-                            self.size = 3.4
+                        withAnimation(
+                            Animation.easeInOut(duration: 0.7)
+                                            .repeatCount(4, autoreverses: true)
+                                ) {
+                            self.size = 3.8
                             self.opacity = 1.0
                         }
                     }
-                    .animation(
-                        Animation.easeInOut(duration: 1.5)
-                                    .repeatCount(2, autoreverses: true)
-                            )
                 }
                 .onAppear {
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 2.3) {
+                        withAnimation(Animation.easeOut(duration: 0.3)) {
+                            self.isActive = true
+                        }
                         self.isActive = true
                     }
                 }
