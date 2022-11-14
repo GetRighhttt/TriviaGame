@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct AnswerView: View {
+    @EnvironmentObject var triviaManager: TriviaManager
+
     
     // is the actual answer
     var answer: Answer
@@ -52,5 +54,6 @@ struct AnswerView_Previews: PreviewProvider {
     static var previews: some View {
         AnswerView(answer: Answer(text: "Yup.",
                                   isCorrect: false))
+        .environmentObject(TriviaManager())
     }
 }

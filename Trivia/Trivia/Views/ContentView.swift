@@ -10,6 +10,8 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         
+        @StateObject var triviaManager = TriviaManager()
+        
         /*
          Need 2 vstacks to stack the views on top of eachother.
          */
