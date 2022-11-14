@@ -11,6 +11,10 @@
 		115E271B292271E200A439BF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115E271A292271E200A439BF /* ContentView.swift */; };
 		115E271D292271E400A439BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 115E271C292271E400A439BF /* Assets.xcassets */; };
 		115E2720292271E400A439BF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 115E271F292271E400A439BF /* Preview Assets.xcassets */; };
+		115E2728292272EC00A439BF /* UniversalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115E2727292272EC00A439BF /* UniversalButton.swift */; };
+		115E272B2922823400A439BF /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115E272A2922823400A439BF /* Extensions.swift */; };
+		115E272D2922832C00A439BF /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115E272C2922832C00A439BF /* QuestionView.swift */; };
+		115E272F292284CF00A439BF /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115E272E292284CF00A439BF /* ProgressBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,10 @@
 		115E271A292271E200A439BF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		115E271C292271E400A439BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		115E271F292271E400A439BF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		115E2727292272EC00A439BF /* UniversalButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversalButton.swift; sourceTree = "<group>"; };
+		115E272A2922823400A439BF /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		115E272C2922832C00A439BF /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
+		115E272E292284CF00A439BF /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,10 +59,12 @@
 		115E2717292271E200A439BF /* Trivia */ = {
 			isa = PBXGroup;
 			children = (
+				115E27292922741800A439BF /* Views */,
+				115E2726292272D200A439BF /* Component */,
 				115E2718292271E200A439BF /* TriviaApp.swift */,
-				115E271A292271E200A439BF /* ContentView.swift */,
 				115E271C292271E400A439BF /* Assets.xcassets */,
 				115E271E292271E400A439BF /* Preview Content */,
+				115E272A2922823400A439BF /* Extensions.swift */,
 			);
 			path = Trivia;
 			sourceTree = "<group>";
@@ -65,6 +75,24 @@
 				115E271F292271E400A439BF /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		115E2726292272D200A439BF /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				115E2727292272EC00A439BF /* UniversalButton.swift */,
+				115E272E292284CF00A439BF /* ProgressBar.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		115E27292922741800A439BF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				115E271A292271E200A439BF /* ContentView.swift */,
+				115E272C2922832C00A439BF /* QuestionView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +165,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				115E272D2922832C00A439BF /* QuestionView.swift in Sources */,
+				115E2728292272EC00A439BF /* UniversalButton.swift in Sources */,
 				115E271B292271E200A439BF /* ContentView.swift in Sources */,
 				115E2719292271E200A439BF /* TriviaApp.swift in Sources */,
+				115E272F292284CF00A439BF /* ProgressBar.swift in Sources */,
+				115E272B2922823400A439BF /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
