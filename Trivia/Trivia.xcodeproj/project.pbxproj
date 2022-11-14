@@ -20,6 +20,7 @@
 		115E27362922913200A439BF /* TriviaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115E27352922913200A439BF /* TriviaView.swift */; };
 		115E27382922933E00A439BF /* Trivia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115E27372922933E00A439BF /* Trivia.swift */; };
 		115E273A2922992900A439BF /* TriviaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115E27392922992900A439BF /* TriviaManager.swift */; };
+		11FB297C2922C681002C9801 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FB297B2922C681002C9801 /* SplashScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		115E27352922913200A439BF /* TriviaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriviaView.swift; sourceTree = "<group>"; };
 		115E27372922933E00A439BF /* Trivia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trivia.swift; sourceTree = "<group>"; };
 		115E27392922992900A439BF /* TriviaManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriviaManager.swift; sourceTree = "<group>"; };
+		11FB297B2922C681002C9801 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				115E271A292271E200A439BF /* ContentView.swift */,
 				115E272C2922832C00A439BF /* QuestionView.swift */,
 				115E27352922913200A439BF /* TriviaView.swift */,
+				11FB297B2922C681002C9801 /* SplashScreen.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11FB297C2922C681002C9801 /* SplashScreen.swift in Sources */,
 				115E272D2922832C00A439BF /* QuestionView.swift in Sources */,
 				115E27362922913200A439BF /* TriviaView.swift in Sources */,
 				115E27382922933E00A439BF /* Trivia.swift in Sources */,
