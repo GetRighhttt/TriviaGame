@@ -13,6 +13,23 @@ extension Text {
         self.font(.largeTitle)
             .fontWeight(.heavy)
             .foregroundColor(Color("ButtonColor"))
-            .shadow(radius: 15)
+    }
+    
+    func universalText() -> some View {
+        self.foregroundColor(Color("ShadeGreenColor"))
+            .fontWeight(.semibold)
+            .font(.system(size: 20))
+            .shadow(radius: 10)
+    }
+}
+
+extension HStack {
+    func universalHStack() -> some View {
+        self.padding()
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .foregroundColor(Color("ButtonColor"))
+            .background(.white)
+            .cornerRadius(15)
+            .shadow(color: .gray, radius: 5, x: 0.5, y: 0.5)
     }
 }

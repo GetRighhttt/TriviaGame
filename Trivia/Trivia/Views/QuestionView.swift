@@ -26,16 +26,23 @@ struct QuestionView: View {
             
             // display questions
             VStack(alignment: .leading, spacing: 20) {
-                Text("Question")
-                    .foregroundColor(Color("ButtonColor"))
-                    .fontWeight(.semibold)
+                
+                // Question
+                Text("Which &quot;Toy Story&quot; character was voiced by Don Rickles?")
+                    .universalText()
+                
+                // AnswerViews for right and wrong answers.
+                AnswerView(answer: Answer(text: "Mr. Potato Head",
+                                         isCorrect: true))
+                AnswerView(answer: Answer(text: "Buzz Light Year",
+                                         isCorrect: false))
             }
             
+            UniversalButton(text: "Continue")
             
         }
         .padding()
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .edgesIgnoringSafeArea(.all)
         .background(Color("AccentColor"))
     }
 }

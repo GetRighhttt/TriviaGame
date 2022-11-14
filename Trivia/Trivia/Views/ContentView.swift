@@ -13,26 +13,33 @@ struct ContentView: View {
         /*
          Need 2 vstacks to stack the views on top of eachother.
          */
-        VStack(spacing: 40) {
-            VStack(spacing: 20) {
+        NavigationView {
+            VStack(spacing: 40) {
+                VStack(spacing: 20) {
+                    
+                    //title
+                    Text("Trivia Game")
+                        .universalTitle()
+                    
+                    // headline
+                    Text("Let's see how good your trivia skills are!")
+                        .font(.headline)
+                        .foregroundColor(Color("ButtonColor"))
+                }
                 
-                //title
-                Text("Trivia Game")
-                    .universalTitle()
+                // start button
+                NavigationLink {
+                    TriviaView()
+                    
+                } label: {
+                    UniversalButton(text: "Let's Begin!")
+                }
                 
-                // headline
-                Text("Let's see how good your trivia skills are!")
-                    .font(.headline)
-                    .foregroundColor(Color("ButtonColor"))
             }
-            
-            // start button
-            UniversalButton(text: "Let's Begin!")
-            
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .edgesIgnoringSafeArea(.all)
+            .background(Color("AccentColor"))
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .edgesIgnoringSafeArea(.all)
-        .background(Color("AccentColor"))
     }
 }
 

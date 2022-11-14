@@ -24,7 +24,7 @@ struct ProgressBar: View {
                 .frame(maxWidth: progress, maxHeight: 4)
                 .foregroundColor(Color("ShadeGreenColor"))
                 .cornerRadius(20)
-        }
+        }.shadow(radius: 10)
     }
 }
 
