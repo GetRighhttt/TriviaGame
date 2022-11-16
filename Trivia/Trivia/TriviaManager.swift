@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 /*
  Here is where we fetch data from the API.
@@ -91,11 +92,15 @@ class TriviaManager: ObservableObject {
      Method to go to next question
      */
     func navigateToNextQuestion() {
+        @State var showDetail = false
         if index + 1 < length {
             index += 1
             setQuestion()
         } else {
             reachedEnd = true
+        }
+        withAnimation(.easeInOut(duration: 3.0)) {
+            showDetail.toggle()
         }
     }
     

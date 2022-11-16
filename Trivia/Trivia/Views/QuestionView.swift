@@ -10,6 +10,7 @@ import SwiftUI
 struct QuestionView: View {
     
     @EnvironmentObject var triviaManager: TriviaManager
+    @State private var showDetail = false
     
     var body: some View {
         VStack(spacing: 40) {
@@ -46,7 +47,11 @@ struct QuestionView: View {
                 UniversalButton(text: "Continue", background: triviaManager.answerSelected ? Color("SecondaryAccentColor") : .gray)
             }
             .disabled(!triviaManager.answerSelected)
-            
+            .onTapGesture {
+                withAnimation(.easeInOut(duration: 3.0)) {
+                    showDetail.toggle()
+                }
+            }
         }
         .padding()
         .frame(maxWidth: .infinity, maxHeight: .infinity)
